@@ -4,16 +4,15 @@ import './index.css';
 // import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-function liveTime() {
-var greeting = React.createElement('h1', {}, 'hello, so called world');
-var clock = React.createElement('h2', {}, `It is ${new Date().toLocaleTimeString()}`);
-var app = React.createElement('div', {}, greeting, clock);
+var heading =React.createElement('h1', {}, ' Less than helpful queue');
+var ticketLocation = React.createElement('h3', {}, '3a');
+var ticketName = React.createElement('h3', {}, 'Tom and Jerry');
+var ticketIssue = React.createElement('h3', {}, 'Some sort of help request');
+var app = React.createElement('div', {}, heading, ticketLocation, ticketName, ticketIssue);
 
 ReactDOM.render(
 app,
 document.getElementById('root')
 );
-}
 
-setInterval(liveTime, 1000);
 serviceWorker.unregister();
