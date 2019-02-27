@@ -1,17 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+// import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+function liveTime() {
 var greeting = React.createElement('h1', {}, 'hello, so called world');
+var clock = React.createElement('h2', {}, `It is ${new Date().toLocaleTimeString()}`);
+var app = React.createElement('div', {}, greeting, clock);
 
 ReactDOM.render(
-greeting,
+app,
 document.getElementById('root')
 );
+}
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
+setInterval(liveTime, 1000);
 serviceWorker.unregister();
