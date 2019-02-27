@@ -1,7 +1,10 @@
 import React from 'react';
+import Tickets from './Tickets';
 
 function TicketList(){
-    return();
+    return(
+        <Tickets/>
+    );
 }
 
-export default TicketList
+export default TicketList;
