@@ -1,10 +1,10 @@
 import React from 'react';
 
-function Tickets() {
+function Tickets(props) {
     return (
         <div>
-            <h3>3A - Tom and Jerry </h3>
-            <p><em>Firebase entries not saving!</em></p>
+            <h3>{props.location} - {props.names} </h3>
+            <p><em>{props.issue}</em></p>
             <hr/>
         </div>
     );
